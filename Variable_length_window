@@ -4,6 +4,26 @@ So, In summary we need to actually figure out the window size only satisying a g
 
 Lets take an example;-
 (1) Longest subarray with sum k.
-   The problem statement states that you need to find the largest subarray(in terms of length) whose sum of the elements is equal   t
-
+   The problem statement states that you need to find the largest subarray(in terms of length) whose sum of the elements is equal to k
    
+   Approach:-
+      (i) we need to take two pointer as we took earlier in fixed-sized i.e. i & j.
+          now we'll keep on incrementing j and do some operations & simultaneously calculate for the result/output.
+      (ii) Now whenever we'll see that the operation may go beyond the given condition if we'll keep on incrementing j.
+           So whenever the operation will exceed our given condition we'll decrement the operation by deleting the ith element.
+           
+      (iii) So unless & untill we do that have our operation=condition we will not increment j.
+            The moment the operation will be <= condition, we'll then increment j.
+            we can also have some calculations after making the operation <= condition. as well.
+            
+      so as per the above example, whenever the sum>k we keep on deleting the ith element, unless & untill we have sum<=k , till that 
+      time we'll strictly not increment j.
+      whenever we'll have sum<=k then only increment j to have more sum.
+      
+      
+      
+      So basically we'll be using 2 while loops one starting from j=0 to length of the array
+      and the other keep tracking of whether the sum has exceeded k or not.
+      so whenever the control moves inside the inner while loop , we'll not increment j & we'll keep on deleting the ith value by incrementing i.
+      
+      and whenever the inner loop will terminate, then only we'll hwve some calculations , increment j.
