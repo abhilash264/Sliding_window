@@ -1,1 +1,9 @@
+Here we would have been given a condition (might be a sum,product or any particular condition) instead of a fixed-sized window.
+So the requirement might be to find the longest or shortest subarray satisfying a given condition.
+So, In summary we need to actually figure out the window size only satisying a given condition.
 
+Lets take an example;-
+(1) Longest subarray with sum k.
+   The problem statement states that you need to find the largest subarray(in terms of length) whose sum of the elements is equal   t
+
+   
